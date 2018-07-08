@@ -1,14 +1,15 @@
 import time
 def miniMaxSum(arr):
+    lenArr = len(arr)
     total = 0
     mini = 0
     for count in arr:
         mini += count
     maxim = 0
     current = 0
-    for index in range(len(arr)):
+    for index in range(lenArr):
         current = index
-        for num in range(len(arr)):
+        for num in range(lenArr):
             if num != current:
                 total += arr[num]
         if total < mini:
