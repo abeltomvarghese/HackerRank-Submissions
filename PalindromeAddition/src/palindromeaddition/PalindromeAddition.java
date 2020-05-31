@@ -16,12 +16,10 @@ public class PalindromeAddition {
      */
     public static boolean isPalindrome(int number) {
         StringBuilder wholeString = new StringBuilder();
-        String thisString = new String();
-        
-        thisString = Integer.toString(number);
+        String thisString = Integer.toString(number);
+        //thisString = 
         for (int index = thisString.length() -1;index >= 0;index--) {
-            wholeString.append(thisString.charAt(index));
-            
+            wholeString.append(thisString.charAt(index));    
         }
         thisString = wholeString.toString();
         Integer checkIfPal = Integer.valueOf(thisString);
@@ -36,7 +34,7 @@ public class PalindromeAddition {
         Scanner scan = new Scanner(System.in);
         input = scan.nextInt();
         while (isPalindrome(input)) {
-            input = input + input;
+            input = input * 2;
             System.out.println(input);
         }
         
